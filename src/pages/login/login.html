@@ -1,24 +1,32 @@
 <ion-content class="splash-bg" scroll="false">
 <form (submit)="doLogin()" >
   
-<div padding class="login-box box-shadow">
-    <div  class="login-form bg-white">
-	  <div>
-        <ion-label stacked>{{ 'USERNAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </div>
-      
-      <div>
-        <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </div>
-   </div>
- </div> 
-  <div class="border-form bg-white">&nbsp;</div>
+
+
+ <ion-card class="login-card">
+
+  <ion-card-content>
+      <ion-list>
+
+          <ion-item>
+              <ion-label stacked>{{ 'USERNAME' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+              <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
+              <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+          </ion-item>
+        
+        </ion-list>
+  </ion-card-content>
+
+</ion-card>
+
   <div padding class="button-position">
-	<div style="padding-bottom: 60px;"> Forgot Password </div>
+	<div> Forgot Password </div>
     <button  ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
-	<div style="padding-top: 30px;"> Not an User Sign Up Now! </div>
+	<div > Not an User Sign Up Now! </div>
   </div>
 </form>
   

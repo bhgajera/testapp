@@ -16,13 +16,10 @@
 // automatically applied to the <body> element in the app.
 .bg-white{
 	border-radius: 5px;
-	border: 1px solid rgb(255, 255, 255);
-	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(250, 250, 250);
+	background-color: rgb(250, 250, 250);
 }
-
-.splash-bg {
-	position: relative;
-	background: url('../assets/img/login-bg.png') no-repeat transparent;
-	background-size: cover;
-	height:100%;
+.card-md {
+	border-radius:10px;	
 }
+.item-md { border:none; box-shadow: none;}
