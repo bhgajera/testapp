@@ -2,28 +2,23 @@
   <div class="splash-bg">
     <h1>Login to your account</h1>
   </div>
-<form (submit)="doLogin()" >
-  
-
-
+<form (submit)="doLogin()" > 
  <ion-card class="login-card">
-
   <ion-card-content>
       <ion-list>
-
-          <ion-item>
+          <ion-item class="custom-border">
               <ion-label stacked>{{ 'USERNAME' | translate }}</ion-label>
-            <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+            <ion-input type="text" [(ngModel)]="account.email" name="username"></ion-input>
           </ion-item>
         
-          <ion-item>
+          <ion-item class="custom-border">
               <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
               <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
           </ion-item>
 
-          <ion-item>
+          <ion-item >
               <ion-label>Remember Me</ion-label>
-              <ion-checkbox color="dark" ></ion-checkbox>
+              <ion-checkbox  ></ion-checkbox>
             </ion-item>
         
         </ion-list>
@@ -32,9 +27,9 @@
 </ion-card>
 
   <div padding class="button-position">
-	<div> Forgot Password </div>
-    <button  ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
-	<div > Not an User Sign Up Now! </div>
+      <button ion-button clear full class="forgot-btn">Forgot Password </button>
+    <button  ion-button color="primary"  class="big-btn" >{{ 'Login' | translate }}</button>
+	<div class="signup-text">Don’t have an account? <a href="#">SIGN UP</a> </div>
   </div>
 </form>
   

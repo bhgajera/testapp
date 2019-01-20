@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
@@ -8,37 +8,135 @@
 
 
 <ion-content>
+  <ul class="custom-tab">
+    <li class="active"><a href="#">
+        <ion-icon md="ios-document"></ion-icon>
+        <span class="text">Enter Details</span>
+      </a></li>
+    <li><a href="#">
+        <ion-icon md="ios-man"></ion-icon>
+        <span class="text">Gender</span>
+      </a></li>
+    <li><a href="#">
+        <ion-icon md="ios-calendar"></ion-icon>
+      </a></li>
+    <li><a href="#">
+        <ion-icon md="ios-barcode"></ion-icon>
+      </a></li>
+    <li><a href="#">
+        <ion-icon md="ios-lock"></ion-icon>
+      </a></li>
+  </ul>
   <form (submit)="doSignup()">
-    <ion-list>
 
-      <ion-item>
-        <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
-      </ion-item>
+    <ion-card class="signup-card">
+      <ion-card-content>
+        <ion-list>
+          <ion-item class="custom-border">
+            <ion-label stacked>First Name</ion-label>
+            <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
+          </ion-item>
 
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
-      </ion-item>
+          <ion-item class="custom-border">
+            <ion-label stacked>Last Name</ion-label>
+            <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
+          </ion-item>
 
-      <!--
-      Want to add a Username? Here you go:
-
-      <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
-      </div>
-
-    </ion-list>
+          <ion-item class="custom-border">
+            <ion-label stacked>User Name</ion-label>
+            <ion-input type="email" [(ngModel)]="account.username" name="username"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="note">
+          <p>*User your email as username.</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="signup-card">
+      <ion-card-content>
+          <ion-list radio-group >
+              <ion-list-header>
+                I'M A
+              </ion-list-header>
+            
+              <ion-item >
+                <ion-label>Male</ion-label>
+                <ion-radio checked="true" value="male"></ion-radio>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio  value="female"></ion-radio>
+              </ion-item>
+            
+              
+            </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="signup-card">
+        <ion-card-content>
+            <ion-list radio-group>
+                <ion-list-header>
+                    HOW TALL ARE YOU?
+                </ion-list-header>
+              
+                <ion-item>
+                  <ion-label>Go</ion-label>
+                  <ion-radio checked="true" value="go"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Rust</ion-label>
+                  <ion-radio value="rust"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Python</ion-label>
+                  <ion-radio value="python" disabled="true"></ion-radio>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="signup-card">
+          <ion-card-content>
+              <ion-list radio-group>
+                  <ion-list-header>
+                    Language
+                  </ion-list-header>
+                
+                  <ion-item>
+                    <ion-label>Go</ion-label>
+                    <ion-radio checked="true" value="go"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                    <ion-label>Rust</ion-label>
+                    <ion-radio value="rust"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                    <ion-label>Python</ion-label>
+                    <ion-radio value="python" disabled="true"></ion-radio>
+                  </ion-item>
+                </ion-list>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="signup-card">
+            <ion-card-content>
+                <ion-item class="custom-border">
+                    <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
+                    <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+                </ion-item>
+                <ion-item class="custom-border">
+                    <ion-label stacked>Confirm password</ion-label>
+                    <ion-input type="password" [(ngModel)]="account.confirmpassword" name="confirmpassword"></ion-input>
+                </ion-item>
+            </ion-card-content>
+          </ion-card>
   </form>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="primary" class="big-btn">Next</button>
+  </ion-toolbar>
+</ion-footer>
