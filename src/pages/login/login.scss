@@ -1,12 +1,24 @@
 page-login {
-	.splash-bg {
-		position: relative;
-		background: url('../assets/img/app-bg.jpg') no-repeat transparent;
-		background-size: 100% auto;
-		height:100%;
-	 
-	}
-	.login-card {
-		margin: 50% auto 0;	
-	}
+  .splash-bg {
+    position: relative;
+    background: url('../assets/img/app-bg.jpg') no-repeat transparent;
+    background-size: 100% auto;
+    height: 240px;
+    z-index: -1;
+  }
+
+  .login-card {
+    margin: -40px auto 0;
+  }
+
+  h1 {
+    color: #c6d8ed;
+    font-size: 18px;
+    font-family: 'Gotham';
+    font-weight: 300;
+    position: absolute;
+    bottom: 65px;
+    text-align: center;
+    width: 100%;
+  }
 }
