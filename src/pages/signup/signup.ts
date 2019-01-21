@@ -22,6 +22,29 @@ export class SignupPage {
     confirmpassword:'test'
   };
 
+  slides = [{active:true},{active:false},{active:false},{active:false},{active:false}];
+  currentSlide:number = 0;
+  buttonText = 'Next';
+  changeTab(index){
+  
+   if(index == this.slides.length - 1)
+   {
+     alert("form will be submited");
+     return false;
+   }
+
+    this.slides.forEach(function(val,index){
+      val.active = false;
+    })
+    this.currentSlide = index+1;
+    this.slides[this.currentSlide].active = true;
+
+    if (this.slides.length - 1 <= this.currentSlide )
+    {
+      this.buttonText = 'Submit';
+    } 
+
+  } 
   // Our translated text strings
   private signupErrorString: string;
 

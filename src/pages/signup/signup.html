@@ -8,28 +8,33 @@
 
 
 <ion-content>
+   
   <ul class="custom-tab">
-    <li class="active"><a href="#">
+    <li  [ngClass]="{'active':slides[0].active}">
+      <a href="#" >
         <ion-icon md="ios-document"></ion-icon>
         <span class="text">Enter Details</span>
       </a></li>
-    <li><a href="#">
+    <li [ngClass]="{'active':slides[1].active}"><a href="#">
         <ion-icon md="ios-man"></ion-icon>
         <span class="text">Gender</span>
       </a></li>
-    <li><a href="#">
+    <li [ngClass]="{'active':slides[2].active}"><a href="#">
         <ion-icon md="ios-calendar"></ion-icon>
+        <span class="text">Date of Birth</span>
       </a></li>
-    <li><a href="#">
+    <li [ngClass]="{'active':slides[3].active}"><a href="#">
         <ion-icon md="ios-barcode"></ion-icon>
+        <span class="text">Height</span>
       </a></li>
-    <li><a href="#">
+    <li [ngClass]="{'active':slides[4].active}"><a href="#">
         <ion-icon md="ios-lock"></ion-icon>
+        <span class="text">Enter Password</span>
       </a></li>
   </ul>
   <form (submit)="doSignup()">
 
-    <ion-card class="signup-card">
+    <ion-card class="signup-card" *ngIf="slides[0].active">
       <ion-card-content>
         <ion-list>
           <ion-item class="custom-border">
@@ -52,7 +57,7 @@
         </div>
       </ion-card-content>
     </ion-card>
-    <ion-card class="signup-card">
+    <ion-card class="signup-card" *ngIf="slides[1].active">
       <ion-card-content>
           <ion-list radio-group >
               <ion-list-header>
@@ -73,11 +78,11 @@
             </ion-list>
       </ion-card-content>
     </ion-card>
-    <ion-card class="signup-card">
+    <ion-card class="signup-card" *ngIf="slides[2].active">
         <ion-card-content>
             <ion-list radio-group>
                 <ion-list-header>
-                    HOW TALL ARE YOU?
+                    WHEN WHERE YOU BORN?
                 </ion-list-header>
               
                 <ion-item>
@@ -97,11 +102,11 @@
               </ion-list>
         </ion-card-content>
       </ion-card>
-      <ion-card class="signup-card">
+      <ion-card class="signup-card" *ngIf="slides[3].active">
           <ion-card-content>
               <ion-list radio-group>
                   <ion-list-header>
-                    Language
+                      HOW TALL ARE YOU?
                   </ion-list-header>
                 
                   <ion-item>
@@ -121,7 +126,7 @@
                 </ion-list>
           </ion-card-content>
         </ion-card>
-        <ion-card class="signup-card">
+        <ion-card class="signup-card" *ngIf="slides[4].active">
             <ion-card-content>
                 <ion-item class="custom-border">
                     <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
@@ -137,6 +142,6 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <button ion-button color="primary" class="big-btn">Next</button>
+    <button ion-button color="primary" class="big-btn" (click)="changeTab(currentSlide)">{{buttonText}}</button>
   </ion-toolbar>
 </ion-footer>
