@@ -9,11 +9,16 @@ import { Settings } from '../providers';
 
 
 @Component({
-  template: `<ion-menu [content]="content">
+  template: `<ion-menu class="main-menu" [content]="content">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
+    <ion-item >
+      <ion-avatar item-start>
+        <img src="assets/img/avtar.jpg">
+      </ion-avatar>
+      <h2>Nick Anderson</h2>
+      <p>296 Points</p>
+    </ion-item>
+     
     </ion-header>
 
     <ion-content>

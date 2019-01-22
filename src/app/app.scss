@@ -96,7 +96,8 @@ ion-app.md {
 .header .toolbar-md { height: 86px;}
 .footer .toolbar-background-md { background: #fff;}
 .toolbar-content { text-align: center;}
-.show-back-button + .toolbar-content { margin-left: -50px;}
+.show-back-button + .toolbar-content { margin-left: -50px; position: relative;z-index: -1;}
+
 .toolbar-md-primary .toolbar-background-md {
 	background: rgba(50,170,222,1);
 	background: -moz-linear-gradient(left, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
@@ -107,3 +108,17 @@ ion-app.md {
 	background: linear-gradient(to right, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32aade', endColorstr='#3a67ca', GradientType=1 );
 }
+
+.main-menu .toolbar-md { height: 170px;}
+.main-menu .item-md ion-avatar img { width: 85px; height: 85px; display: inline-block; border-radius: 50%; border:solid 4px #285499;}
+.main-menu .header .item-block { display: block; text-align: center;}
+.main-menu .label-md,.main-menu .item-md p{ color: #fff;}
+.main-menu .list-md .item-inner{border:none;}
+.main-menu .item-md{background: rgba(58,103,202,1);
+  background: -moz-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(58,103,202,1)), color-stop(100%, rgba(50,170,222,1)));
+  background: -webkit-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -o-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -ms-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: linear-gradient(to right, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a67ca', endColorstr='#32aade', GradientType=1 );}
