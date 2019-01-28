@@ -3,4 +3,19 @@ page-my-hra {
     .item-md { padding-left: 40px;}
     ion-icon { position: absolute;left: 10px;top: 50%;z-index: 2;transform: translateY(-50%); font-size: 20px;}
     ion-icon:after{content: "";width: 1px;height: 40px;background:color($colors,primary) ;display: block;position: absolute;left: 50%;z-index: -1;top: 16px;}
+    ion-card:last-child ion-icon:after{ display:none;}
+    ion-card.active ~ ion-card ion-icon:after { background: #d9d9d9;}
+    ion-card.active ~ ion-card ion-icon { color: #d9d9d9;}
+    .title { padding: 0 10px; color: #6d6d6d;}
+    .title h3 { 	font-family: 'Gotham';}
+    .title p {font-family: 'Gotham'; font-weight: 500;}
+    .toolbar-md-primary .toolbar-background-md {}
+
+    .toolbar-md { height: 280px;}
+    .item  ion-avatar img { width: 95px; height: 95px; display: inline-block; border-radius: 50%; border:solid 4px #285499;}
+    .header .item-block { display: block; text-align: center; background: none; padding: 10px 0;}
+    ion-header h2,  .item p{ color: #fff;}
+    .item.item-block .item-inner { border:none;}
+
+
 }

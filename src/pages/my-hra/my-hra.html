@@ -1,55 +1,65 @@
-
 <ion-header>
 
   <ion-navbar color="primary">
     <ion-title>My HRA</ion-title>
+    <ion-item >
+        <ion-avatar item-start>
+          <img src="assets/img/avtar.jpg">
+        </ion-avatar>
+        <h2>Nick Anderson</h2>
+        <p>296 Points</p>
+      </ion-item>
   </ion-navbar>
-
+ 
+     
 </ion-header>
 
 
-<ion-content >
-<ion-card >
-  <ion-icon color="primary" name="checkmark-circle"></ion-icon>
-  <button menuClose ion-item>
-    Body Metrics
-  </button>
-</ion-card>
-<ion-card>
-  <ion-icon name="radio-button-off"></ion-icon>
-  <button menuClose ion-item>
-    Dietary Assessment
-  </button>
-</ion-card>
-  
-
-
-  <ion-list>
-    <button menuClose ion-item >
+<ion-content>
+  <div class="title">
+  <h3>My Wellness Wallet</h3>    
+  <p>Please complete the HRA process</p>
+</div> 
+  <ion-card class="active">
+    <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+    <button menuClose ion-item>
       Body Metrics
     </button>
-
-    <button menuClose ion-item >
+  </ion-card>
+  <ion-card>
+    <ion-icon name="radio-button-off"></ion-icon>
+    <button menuClose ion-item>
       Dietary Assessment
     </button>
- 
-    <button menuClose ion-item >
+  </ion-card>
+
+  <ion-card>
+    <ion-icon name="radio-button-off"></ion-icon>
+    <button menuClose ion-item>
       Exercise Participation
     </button>
+  </ion-card>
 
-    <button menuClose ion-item >
+  <ion-card>
+    <ion-icon name="radio-button-off"></ion-icon>
+    <button menuClose ion-item>
       Nutrient Deficiency
     </button>
- 
-    <button menuClose ion-item >
+  </ion-card>
+  <ion-card>
+    <ion-icon name="radio-button-off"></ion-icon>
+    <button menuClose ion-item>
       Cardiovascular
     </button>
- 
-    <button menuClose ion-item >
+  </ion-card>
+  <ion-card>
+    <ion-icon name="radio-button-off"></ion-icon>
+    <button menuClose ion-item>
       Cancer
     </button>
-  </ion-list>
+  </ion-card>
+  
 </ion-content>
 <ion-footer>
- 
+
 </ion-footer>
