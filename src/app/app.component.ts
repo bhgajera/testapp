@@ -39,7 +39,7 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'myHRA', component: 'MyHraPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
+    { title: 'HRA Body', component: 'HraBodyPage' },
     { title: 'Tabs', component: 'TabsPage' },
     { title: 'Cards', component: 'CardsPage' },
     { title: 'Content', component: 'ContentPage' },
