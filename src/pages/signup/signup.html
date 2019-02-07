@@ -10,25 +10,26 @@
 <ion-content>
    
   <ul class="custom-tab">
+     
     <li  [ngClass]="{'active':slides[0].active}">
       <a href="#" >
-        <ion-icon md="ios-document"></ion-icon>
+          <span class="ico-detail ico"></span>
         <span class="text">Enter Details</span>
       </a></li>
     <li [ngClass]="{'active':slides[1].active}"><a href="#">
-        <ion-icon md="ios-man"></ion-icon>
+        <span class="ico-gender ico"></span>
         <span class="text">Gender</span>
       </a></li>
     <li [ngClass]="{'active':slides[2].active}"><a href="#">
-        <ion-icon md="ios-calendar"></ion-icon>
+        <span class="ico-age ico"></span>
         <span class="text">Date of Birth</span>
       </a></li>
     <li [ngClass]="{'active':slides[3].active}"><a href="#">
-        <ion-icon md="ios-barcode"></ion-icon>
+        <span class="ico-measure ico"></span>
         <span class="text">Height</span>
       </a></li>
     <li [ngClass]="{'active':slides[4].active}"><a href="#">
-        <ion-icon md="ios-lock"></ion-icon>
+        <span class="ico-password ico"></span>
         <span class="text">Enter Password</span>
       </a></li>
   </ul>
